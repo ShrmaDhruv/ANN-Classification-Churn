@@ -5,16 +5,14 @@ import tensorflow as tf
 from sklearn.preprocessing import StandardScaler,LabelEncoder,OneHotEncoder
 import numpy as np
 
-model = tf.keras.models.load_model('model.h5')
-# load scaler and encoder
-with open('label_encoder_gender.pkl','rb') as file:
+model = tf.keras.models.load_model('./models/model.h5')
+with open('./models/label_encoder_gender.pkl','rb') as file:
     label_encoder_gender = pickle.load(file)
-with open('Scaler.pkl','rb') as sc:
+with open('./models/Scaler.pkl','rb') as sc:
     scaler = pickle.load(sc)
-with open('OneHotEncoder_Geography.pkl','rb') as f:
+with open('./models/OneHotEncoder_Geography.pkl','rb') as f:
     Geo = pickle.load(f)
 
-# streamlit app
 
 st.title('Customer Churn Prediction')
 

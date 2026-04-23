@@ -6,3 +6,4 @@ tensorflow
 tensorboard
 keras
 matplotlib
+scikeras
